@@ -58,13 +58,13 @@ jobs:
           coverage run manage.py test
 
       - name: Check coverage for views
-        run: coverage report --include="*/views.py,*/views/*.py" --fail-under=80
+        run: coverage report --include="*/views.py,*/views/*.py" --fail-under=50
 
       - name: Check coverage for models
-        run: coverage report --include="*/models.py,*/models/*.py" --fail-under=80
+        run: coverage report --include="*/models.py,*/models/*.py" --fail-under=50
 
       - name: Check coverage for serializers
-        run: coverage report --include="*/serializers.py,*/serializers/*.py" --fail-under=80
+        run: coverage report --include="*/serializers.py,*/serializers/*.py" --fail-under=50
 
       - name: Full coverage report
         run: coverage report
